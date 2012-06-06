@@ -39,6 +39,11 @@
 		1C55C073157F2C6900F0B664 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C55C072157F2C6900F0B664 /* MainViewController.xib */; };
 		1C55C077157F2C6900F0B664 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = 1C55C076157F2C6900F0B664 /* verify.sh */; };
 		1C55C083157F2D7800F0B664 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1C55C082157F2D7800F0B664 /* www */; };
+		1CDDF9C1157F41B20030598E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDDF9B3157F3E740030598E /* CoreVideo.framework */; };
+		1CDDF9C2157F41BE0030598E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDDF9B1157F3E6D0030598E /* AssetsLibrary.framework */; };
+		1CDDF9C3157F41C90030598E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDDF9B5157F3E810030598E /* libiconv.dylib */; };
+		1CDDF9C7157F42610030598E /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDF9C4157F42610030598E /* CDVBarcodeScanner.mm */; };
+		1CDDF9C8157F42610030598E /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDF9C5157F42610030598E /* zxing-all-in-one.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +85,12 @@
 		1C55C075157F2C6900F0B664 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		1C55C076157F2C6900F0B664 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		1C55C082157F2D7800F0B664 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		1CDDF9B1157F3E6D0030598E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		1CDDF9B3157F3E740030598E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		1CDDF9B5157F3E810030598E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		1CDDF9C4157F42610030598E /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CDVBarcodeScanner.mm; sourceTree = "<group>"; };
+		1CDDF9C5157F42610030598E /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "zxing-all-in-one.cpp"; sourceTree = "<group>"; };
+		1CDDF9C6157F42610030598E /* zxing-all-in-one.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "zxing-all-in-one.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +98,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CDDF9C3157F41C90030598E /* libiconv.dylib in Frameworks */,
+				1C55C032157F2C6900F0B664 /* AVFoundation.framework in Frameworks */,
+				1CDDF9C2157F41BE0030598E /* AssetsLibrary.framework in Frameworks */,
+				1CDDF9C1157F41B20030598E /* CoreVideo.framework in Frameworks */,
 				1C55C026157F2C6900F0B664 /* Foundation.framework in Frameworks */,
 				1C55C028157F2C6900F0B664 /* UIKit.framework in Frameworks */,
 				1C55C02A157F2C6900F0B664 /* CoreGraphics.framework in Frameworks */,
 				1C55C02C157F2C6900F0B664 /* AddressBook.framework in Frameworks */,
 				1C55C02E157F2C6900F0B664 /* AddressBookUI.framework in Frameworks */,
 				1C55C030157F2C6900F0B664 /* AudioToolbox.framework in Frameworks */,
-				1C55C032157F2C6900F0B664 /* AVFoundation.framework in Frameworks */,
 				1C55C034157F2C6900F0B664 /* CoreLocation.framework in Frameworks */,
 				1C55C036157F2C6900F0B664 /* MediaPlayer.framework in Frameworks */,
 				1C55C038157F2C6900F0B664 /* QuartzCore.framework in Frameworks */,
@@ -117,6 +131,9 @@
 		1C55C013157F2C6900F0B664 = {
 			isa = PBXGroup;
 			children = (
+				1CDDF9B5157F3E810030598E /* libiconv.dylib */,
+				1CDDF9B3157F3E740030598E /* CoreVideo.framework */,
+				1CDDF9B1157F3E6D0030598E /* AssetsLibrary.framework */,
 				1C55C082157F2D7800F0B664 /* www */,
 				1C55C03F157F2C6900F0B664 /* BoozeTrack */,
 				1C55C024157F2C6900F0B664 /* Frameworks */,
@@ -257,6 +274,9 @@
 		1C55C074157F2C6900F0B664 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				1CDDF9C4157F42610030598E /* CDVBarcodeScanner.mm */,
+				1CDDF9C5157F42610030598E /* zxing-all-in-one.cpp */,
+				1CDDF9C6157F42610030598E /* zxing-all-in-one.h */,
 				1C55C075157F2C6900F0B664 /* README */,
 			);
 			name = Plugins;
@@ -362,6 +382,8 @@
 				1C55C046157F2C6900F0B664 /* main.m in Sources */,
 				1C55C06E157F2C6900F0B664 /* AppDelegate.m in Sources */,
 				1C55C071157F2C6900F0B664 /* MainViewController.m in Sources */,
+				1CDDF9C7157F42610030598E /* CDVBarcodeScanner.mm in Sources */,
+				1CDDF9C8157F42610030598E /* zxing-all-in-one.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
