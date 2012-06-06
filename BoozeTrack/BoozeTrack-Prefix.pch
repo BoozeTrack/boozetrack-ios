@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'BoozeTrack' target in the 'BoozeTrack' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
