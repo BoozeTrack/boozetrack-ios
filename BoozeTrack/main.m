@@ -20,7 +20,7 @@
 //  main.m
 //  BoozeTrack
 //
-//  Created by Chris Petersen on 6/5/12.
+//  Created by Chris Petersen on 6/6/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 

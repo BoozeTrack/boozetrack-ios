@@ -7,13 +7,13 @@
         <meta charset="utf-8">
 
 
-        <!-- iPad/iPhone specific css below, add after your main css >
+        <!-- iPad/iPhone specific css below, add after your main css -->
         <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
         <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
-        -->
         <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
-    <script type="text/javascript">
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="barcodescanner.js"></script>
+        <script type="text/javascript">
 
 
         // If you want to prevent dragging, uncomment this section
@@ -38,6 +38,7 @@
         function onBodyLoad()
         {
                 document.addEventListener("deviceready", onDeviceReady, false);
+                //dotest();
         }
 
         /* When this function is called, Cordova has been initialized and is ready to roll */
@@ -46,12 +47,11 @@
         for more details -jm */
         function onDeviceReady()
         {
-                // do your thing!
-                //navigator.notification.alert("Cordova is working")
+            console.log("Cordova is working");
         }
 
         function take_pic() {
-            navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+            navigator.camera.getPicture(onSuccess, onFail('pic'), { quality: 50,
                 destinationType: Camera.DestinationType.DATA_URL
              });
         }
@@ -61,21 +61,22 @@
             image.src = "data:image/jpeg;base64," + imageData;
         }
 
-        function onFail(message) {
-            alert('Failed because: ' + message);
+        function onFail(what) {
+            return function(message) {
+                alert(what + ' failed because: ' + message);
+            };
         }
 
         function scan() {
             window.plugins.barcodeScanner.scan(
                 function(result) {
                     if (result.cancelled)
-                        alert("the user cancelled the scan")
+                        alert("the user cancelled the scan");
                     else
-                        alert("we got a barcode: " + result.text)
+                        document.getElementById('stuff').innerHTML = result.text;
+                        //alert("we got a barcode\n" + result.text);
                 },
-                function(error) {
-                    alert("scanning failed: " + error)
-                }
+                onFail("barcode scan")
             );
         }
 
@@ -91,9 +92,13 @@
         </ol -->
 
         <ul>
-            <li><a href="javascript:take_pic();">Camera</a></li>
-            <li><a href="javascript:take_pic();">Scan</a></li>
+            <li><input type="button" onclick="take_pic();" value="Camera"></li>
+            <li></li>
+            <li><input type="button" onclick="scan();" value="scan"></li>
+            <li></li>
+            <li><input type="button" onclick="alert('test');" value="alert"></li>
         </ul>
-        <img id="myImage">
+        <p id="stuff"></p>
+        <img id="myImage" width="320" height="320">
   </body>
 </html>
