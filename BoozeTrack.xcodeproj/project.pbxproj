@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C51B2291580995C002E4B13 /* cordova in Resources */ = {isa = PBXBuildFile; fileRef = 1C51B2281580995C002E4B13 /* cordova */; };
 		1CA9F00715804A0000BF7AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA9F00615804A0000BF7AA6 /* Foundation.framework */; };
 		1CA9F00915804A0000BF7AA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA9F00815804A0000BF7AA6 /* UIKit.framework */; };
 		1CA9F00B15804A0000BF7AA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA9F00A15804A0000BF7AA6 /* CoreGraphics.framework */; };
@@ -42,10 +43,10 @@
 		1CE88E6315804C3D00A9D505 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE88E6215804C3D00A9D505 /* libiconv.dylib */; };
 		1CE88E6515804C4600A9D505 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE88E6415804C4600A9D505 /* CoreVideo.framework */; };
 		1CE88E6715804CE100A9D505 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE88E6615804CE100A9D505 /* AssetsLibrary.framework */; };
-		1CE88EDA1580595300A9D505 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1CE88ED91580595300A9D505 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C51B2281580995C002E4B13 /* cordova */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cordova; path = ../cordova; sourceTree = "<group>"; };
 		1CA9F00215804A0000BF7AA6 /* BoozeTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoozeTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA9F00615804A0000BF7AA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1CA9F00815804A0000BF7AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -89,7 +90,6 @@
 		1CE88E6215804C3D00A9D505 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		1CE88E6415804C4600A9D505 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		1CE88E6615804CE100A9D505 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		1CE88ED91580595300A9D505 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 		1CA9EFF415804A0000BF7AA6 = {
 			isa = PBXGroup;
 			children = (
-				1CE88ED91580595300A9D505 /* www */,
+				1C51B2281580995C002E4B13 /* cordova */,
 				1CE88E6615804CE100A9D505 /* AssetsLibrary.framework */,
 				1CE88E6415804C4600A9D505 /* CoreVideo.framework */,
 				1CE88E6215804C3D00A9D505 /* libiconv.dylib */,
@@ -350,7 +350,7 @@
 				1CA9F04915804A0000BF7AA6 /* Capture.bundle in Resources */,
 				1CA9F04B15804A0000BF7AA6 /* Cordova.plist in Resources */,
 				1CA9F05415804A0000BF7AA6 /* MainViewController.xib in Resources */,
-				1CE88EDA1580595300A9D505 /* www in Resources */,
+				1C51B2291580995C002E4B13 /* cordova in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

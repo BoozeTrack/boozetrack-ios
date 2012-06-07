@@ -77,7 +77,7 @@
     
     self.viewController = [[[MainViewController alloc] init] autorelease];
     self.viewController.useSplashScreen = YES;
-    self.viewController.wwwFolderName = @"www";
+    self.viewController.wwwFolderName = @"cordova";
     self.viewController.startPage = @"index.html";
     self.viewController.invokeString = invokeString;
     self.viewController.view.frame = viewBounds;
